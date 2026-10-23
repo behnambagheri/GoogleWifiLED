@@ -1,0 +1,25 @@
+{
+    "luci-app-googlewifi-led": {
+        "description": "Configure and inspect the Google WiFi Passwall2 LED monitor",
+        "read": {
+            "uci": ["googlewifi_led"],
+            "file": {
+                "/var/run/googlewifi-led/status": ["read"],
+                "/tmp/run/googlewifi-led/status": ["read"]
+            },
+            "ubus": {
+                "file": ["read"],
+                "service": ["list"]
+            }
+        },
+        "write": {
+            "uci": ["googlewifi_led"],
+            "file": {
+                "/etc/init.d/googlewifi-led": ["exec"]
+            },
+            "ubus": {
+                "file": ["exec"]
+            }
+        }
+    }
+}

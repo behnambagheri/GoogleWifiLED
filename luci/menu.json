@@ -1,0 +1,13 @@
+{
+    "admin/system/googlewifi_led": {
+        "title": "Passwall2 LED Monitor",
+        "order": 61,
+        "action": {
+            "type": "view",
+            "path": "system/googlewifi_led"
+        },
+        "depends": {
+            "acl": ["luci-app-googlewifi-led"]
+        }
+    }
+}
